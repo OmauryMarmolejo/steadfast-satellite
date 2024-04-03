@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+const { post } = Astro.params
+
+export async function getStaticPaths() {
+    return [
+        { params: { post: 'hello-world' } },
+        { params: { post: 'another-post' } },
+        { params: { post: 'yet-another-post' } }
+    ]
+}
+---
+
+<Layout title="Post">
+    <h1 style="color: white;">{post}</h1>
+    <p>This is a post</p>
+</Layout>
