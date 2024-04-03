@@ -1,9 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import testImage from '../images/test.jpg'
+import { Image } from "astro:assets"
 ---
 
 <Layout title="About">
     <h1>About</h1>
     <p>This is the about page.</p>
+
+
+    <img src={testImage.src} alt="Test image" />
+    <Image src={testImage} alt="Test image" />
     <a href="/">Go back home</a>
 </Layout>
