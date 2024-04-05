@@ -12,6 +12,10 @@ export async function getStaticPaths() {
 ---
 
 <Layout title="Post">
+    <script is:inline>
+        alert('Hello from Astro')
+    </script>
+
     <h1 style="color: white;">{post}</h1>
     <p>This is a post</p>
 </Layout>
